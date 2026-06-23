@@ -35,17 +35,22 @@
       position: sticky;
       top: 0;
       z-index: 100;
+      border-bottom: 3px solid var(--accent);
     }
     nav a {
       color: var(--text);
-      margin: 0 20px;
+      margin: 0 18px;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.2rem;
+      transition: all 0.3s;
     }
-    nav a:hover { color: #ff0000; }
+    nav a:hover { 
+      color: var(--accent);
+      transform: scale(1.08);
+    }
 
-    section { padding: 80px 20px; max-width: 1200px; margin: 0 auto; }
+    section { padding: 110px 20px 80px 20px; max-width: 1200px; margin: 0 auto; }
     
     h2 {
       color: var(--accent);
@@ -85,7 +90,7 @@
     <a href="#exercicios">💪 Exercícios</a>
     <a href="#calculadora">🧮 Calculadora</a>
     <a href="#plano">📅 Plano 12 Semanas</a>
-    <a href="#clark">Clark Kent Mode</a>
+    <a href="#clark">🦸 Clark Kent Mode</a>
   </nav>
 
   <!-- ALIMENTAÇÃO -->
@@ -125,7 +130,7 @@
       <p><strong>Ingredientes:</strong> 200g salmão • Batata doce • Salada verde com azeite</p>
       <p><strong>Macros:</strong> ~620 kcal | 50g Prot | 45g Carb | 25g Gord</p>
       <p><strong>Tempo de Preparo:</strong> 15 minutos</p>
-      <p><strong>Benefícios:</strong> Rico em ômega-3 + excelente para recuperação muscular</p>
+      <p><strong>Benefícios:</strong> Rico em ômega-3 + excelente para recuperação noturna</p>
       <h4>Modo de Preparo:</h4>
       <ol>
         <li>Tempere o salmão com limão e ervas.</li>
@@ -139,26 +144,12 @@
       <p><strong>Ingredientes:</strong> 200g Iogurte Grego natural • 1 Maçã ou morangos • 20g Amêndoas • Canela</p>
       <p><strong>Macros:</strong> ~320 kcal | 20g Prot | 25g Carb | 18g Gord</p>
       <p><strong>Tempo de Preparo:</strong> 2 minutos</p>
-      <p><strong>Benefícios:</strong> Mantém saciedade + fornece gorduras boas e probióticos</p>
+      <p><strong>Benefícios:</strong> Mantém saciedade + gorduras boas e probióticos</p>
       <h4>Modo de Preparo:</h4>
       <ol>
         <li>Coloque o iogurte grego numa taça.</li>
         <li>Corte a maçã ou adicione morangos.</li>
         <li>Polvilhe amêndoas e canela.</li>
-      </ol>
-    </div>
-
-    <div class="card">
-      <h3>💚 Shake Anti-Kryptonite (Pós-treino)</h3>
-      <p><strong>Ingredientes:</strong> 1 scoop whey • 300ml leite de aveia • banana • espinafre • morangos</p>
-      <p><strong>Macros:</strong> ~420 kcal | 35g Prot | 45g Carb | 8g Gord</p>
-      <p><strong>Tempo de Preparo:</strong> 3 minutos</p>
-      <p><strong>Benefícios:</strong> Recuperação muscular rápida</p>
-      <h4>Modo de Preparo:</h4>
-      <ol>
-        <li>Coloque tudo no liquidificador.</li>
-        <li>Bata por 40 segundos.</li>
-        <li>Beba imediatamente após o treino.</li>
       </ol>
     </div>
   </section>
@@ -172,30 +163,58 @@
       <div class="exercise card"><h3>Tríceps - Flexões Diamante</h3><p>3 séries × 10-15 repetições</p></div>
       <div class="exercise card"><h3>Quadríceps - Agachamento Livre</h3><p>4 séries × 15-25 repetições</p></div>
       <div class="exercise card"><h3>Glúteos - Ponte de Glúteo</h3><p>4 séries × 15-20 repetições</p></div>
-      <div class="exercise card"><h3>Pernas - Avanços (Lunges)</h3><p>3 séries × 12 por perna</p></div>
+      <div class="exercise card"><h3>Pernas - Avanços (Lunges)</h3><p>3 séries × 12 repetições por perna</p></div>
       <div class="exercise card"><h3>Abdômen - Prancha + Bicicleta</h3><p>3 séries × 30-60s (Prancha) + 20 por lado</p></div>
     </div>
   </section>
 
-  <!-- CALCULADORA -->
-  <section id="calculadora" class="card">
-    <h2>🧮 Calculadora de Calorias Diárias</h2>
-    <label>Sexo:</label>
-    <select id="sexo"><option value="masculino">Masculino</option><option value="feminino">Feminino</option></select>
-    <label>Idade (anos):</label><input type="number" id="idade" value="25">
-    <label>Peso (kg):</label><input type="number" id="peso" value="75">
-    <label>Altura (cm):</label><input type="number" id="altura" value="175">
-    <label>Nível de Atividade:</label>
-    <select id="atividade">
-      <option value="1.2">Sedentário</option>
-      <option value="1.375" selected>Leve (1-3x)</option>
-      <option value="1.55">Moderado (3-5x)</option>
-      <option value="1.725">Intenso (6-7x)</option>
-    </select>
-    <button onclick="calcularCalorias()">Calcular Minhas Calorias</button>
-    <div id="resultado" style="margin-top:25px; padding:20px; background:#1a1a1a; border-radius:10px; font-size:1.2rem;"></div>
+  <!-- CALCULADORA - DUAS CALCULADORAS -->
+  <section id="calculadora">
+    <h2>🧮 Calculadoras</h2>
+    
+    <!-- Calculadora Pessoal -->
+    <div class="card">
+      <h3>1. Calorias Diárias Pessoais</h3>
+      <label>Sexo:</label><select id="sexo"><option value="masculino">Masculino</option><option value="feminino">Feminino</option></select>
+      <label>Idade (anos):</label><input type="number" id="idade" value="25">
+      <label>Peso (kg):</label><input type="number" id="peso" value="75">
+      <label>Altura (cm):</label><input type="number" id="altura" value="175">
+      <label>Nível de Atividade:</label>
+      <select id="atividade">
+        <option value="1.2">Sedentário</option>
+        <option value="1.375" selected>Leve (1-3x)</option>
+        <option value="1.55">Moderado (3-5x)</option>
+        <option value="1.725">Intenso (6-7x)</option>
+      </select>
+      <button onclick="calcularCaloriasPessoais()">Calcular Calorias Diárias</button>
+      <div id="resultadoPessoal" style="margin-top:20px; padding:15px; background:#1a1a1a; border-radius:8px;"></div>
+    </div>
+
+    <!-- Calculadora de Refeições -->
+    <div class="card">
+      <h3>2. Calculadora de Calorias da Refeição</h3>
+      <select id="alimento">
+        <option value="0">Escolhe um alimento...</option>
+        <option value="165">Frango Grelhado (100g) - 165 kcal</option>
+        <option value="130">Arroz Cozido (100g) - 130 kcal</option>
+        <option value="89">Banana (1 unid.) - 89 kcal</option>
+        <option value="52">Maçã (1 unid.) - 52 kcal</option>
+        <option value="58">Ovo (1 unid.) - 58 kcal</option>
+        <option value="95">Aveia (30g) - 95 kcal</option>
+        <option value="200">Salmão (100g) - 200 kcal</option>
+        <option value="160">Iogurte Grego (200g) - 160 kcal</option>
+        <option value="580">Pasta de Amendoim (2 colheres) - 580 kcal</option>
+      </select>
+      <input type="number" id="quantidade" placeholder="Quantidade (g ou unid.)" value="100">
+      <button onclick="adicionarAlimento()">Adicionar Alimento</button>
+
+      <div id="listaRefeicao" style="margin:20px 0;"></div>
+      <h3>Total da Refeição: <span id="totalCalorias" style="color:#ffd700; font-size:1.4rem;">0 kcal</span></h3>
+      <button onclick="limparRefeicao()">Limpar Tudo</button>
+    </div>
   </section>
 
+  <!-- PLANO E CLARK KENT -->
   <section id="plano">
     <h2>📅 Plano de Treino de 12 Semanas</h2>
     <div class="card">
@@ -208,19 +227,21 @@
     </div>
   </section>
 
-  <section id="clark" class="card" style="text-align:center;">
-    <h2>Clark Kent Mode - Ativado</h2>
-    <p style="font-size:1.5rem;">Disciplina é o seu verdadeiro superpoder.</p>
-    <p style="color:#ff3333; font-size:1.6rem;">"Smallville não te define. Suas escolhas definem você."</p>
+  <section id="clark">
+    <h2>🦸 Clark Kent Mode - Ativado</h2>
+    <div class="card" style="text-align:center;">
+      <p style="font-size:1.5rem;">Disciplina é o seu verdadeiro superpoder.</p>
+      <p style="color:#ff3333; font-size:1.6rem;">"Smallville não te define. Suas escolhas definem você."</p>
+    </div>
   </section>
 
   <footer style="text-align:center; padding:50px; background:#000; color:#ff6666;">
     Smallville Health Fortress © 2026
   </footer>
 
-  <!-- SCRIPT CORRIGIDO - Colocado no final -->
   <script>
-    function calcularCalorias() {
+    // Calculadora Pessoal
+    function calcularCaloriasPessoais() {
       const sexo = document.getElementById('sexo').value;
       const idade = parseInt(document.getElementById('idade').value) || 25;
       const peso = parseFloat(document.getElementById('peso').value) || 75;
@@ -233,14 +254,55 @@
 
       const tdee = Math.round(tmb * atividade);
 
-      document.getElementById('resultado').innerHTML = `
-        <strong>Resultados para você:</strong><br><br>
+      document.getElementById('resultadoPessoal').innerHTML = `
+        <strong>Resultados:</strong><br>
         TMB: ${Math.round(tmb)} kcal<br>
-        Calorias de Manutenção: <strong>${tdee} kcal</strong><br><br>
-        Ganho de massa: ${Math.round(tdee * 1.2)} kcal<br>
-        Perda de gordura: ${Math.round(tdee * 0.85)} kcal<br><br>
-        <em>Agora vai treinar, futuro Superman!</em>
+        Calorias Diárias: <strong>${tdee} kcal</strong><br><br>
+        Ganho muscular: ${Math.round(tdee * 1.2)} kcal<br>
+        Perda de gordura: ${Math.round(tdee * 0.85)} kcal
       `;
+    }
+
+    // Calculadora de Refeições
+    let refeicaoAtual = [];
+
+    function adicionarAlimento() {
+      const select = document.getElementById('alimento');
+      const nome = select.options[select.selectedIndex].text;
+      const calPor100g = parseInt(select.value);
+      const quantidade = parseFloat(document.getElementById('quantidade').value) || 100;
+
+      if (calPor100g === 0) {
+        alert("Por favor, escolhe um alimento.");
+        return;
+      }
+
+      const calorias = Math.round((calPor100g / 100) * quantidade);
+      refeicaoAtual.push({nome, calorias});
+
+      atualizarLista();
+    }
+
+    function atualizarLista() {
+      let html = "<ul>";
+      let total = 0;
+      refeicaoAtual.forEach((item, i) => {
+        html += `<li>${item.nome} — ${item.calorias} kcal <button onclick="remover(${i})" style="color:red;">×</button></li>`;
+        total += item.calorias;
+      });
+      html += "</ul>";
+      document.getElementById('listaRefeicao').innerHTML = html;
+      document.getElementById('totalCalorias').textContent = total + " kcal";
+    }
+
+    function remover(i) {
+      refeicaoAtual.splice(i, 1);
+      atualizarLista();
+    }
+
+    function limparRefeicao() {
+      refeicaoAtual = [];
+      atualizarLista();
     }
   </script>
 </body>
