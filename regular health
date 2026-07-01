@@ -13,11 +13,14 @@
     nav { background: #1a1a1a; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent); }
     nav a { color: var(--text); margin: 0 18px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: all 0.3s; }
     nav a:hover { color: var(--accent); transform: scale(1.08); }
-    section { padding: 120px 20px 80px 20px; max-width: 1200px; margin: 0 auto; }
+    section { padding: 100px 20px 80px 20px; max-width: 1200px; margin: 0 auto; }
     h2 { color: var(--accent); text-align: center; margin-bottom: 40px; text-shadow: 0 0 20px #ff0000; }
     .card { background: rgba(20, 20, 20, 0.98); border: 2px solid var(--accent); border-radius: 15px; padding: 25px; margin: 25px 0; box-shadow: 0 0 30px rgba(255, 51, 51, 0.5); }
     .muscle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
     .exercise { background: #1a1a1a; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid var(--accent); }
+    textarea { width: 100%; resize: vertical; min-height: 130px; }
+    button { background: var(--accent); color: white; border: none; padding: 12px 20px; border-radius: 8px; cursor: pointer; font-weight: bold; }
+    button:hover { background: #ff5555; }
   </style>
 </head>
 <body>
@@ -27,82 +30,67 @@
   <nav>
     <a href="#nutricao">🥗 Alimentação</a>
     <a href="#exercicios">💪 Exercícios</a>
-    <a href="#calculadora">🧮 Calculadora</a>
+    <a href="#calculadora">🧮 Calculadora IA</a>
     <a href="#plano">📅 Plano 12 Semanas</a>
     <a href="#clark">🦸 Clark Kent Mode</a>
   </nav>
 
-  <!-- ALIMENTAÇÃO -->
+  <!-- ALIMENTAÇÃO - MUITAS RECEITAS -->
   <section id="nutricao">
-    <h2>🥗 Enciclopédia de Alimentação</h2>
+    <h2>🥗 Enciclopédia de Receitas</h2>
+
     <div class="card">
-      <h3>🔋 Pequeno Almoço - Super-Homem</h3>
-      <p><strong>Ingredientes:</strong> 6 claras + 2 ovos inteiros • 80g Aveia • 2 Bananas • 2 colheres de pasta de amendoim • Canela</p>
-      <p><strong>Macros:</strong> ~680 kcal | 48g Prot | 75g Carb | 22g Gord</p>
-      <p><strong>Tempo de Preparo:</strong> 10 minutos</p>
-      <p><strong>Benefícios:</strong> Energia sustentada para o dia todo + alto teor de proteína</p>
+      <h3>🔋 Pequeno Almoço</h3>
+      <p><strong>Super-Homem:</strong> 6 claras + 2 ovos inteiros, 80g aveia, 2 bananas, 2 colheres pasta de amendoim</p>
+      <p><strong>Macros:</strong> ~680 kcal | 48P | 75C | 22G</p>
       <h4>Modo de Preparo:</h4>
-      <ol>
-        <li>Cozinhe a aveia com água ou leite de aveia por 3-4 minutos.</li>
-        <li>Faça os ovos mexidos ou omelete.</li>
-        <li>Corte as bananas e adicione por cima com pasta de amendoim e canela.</li>
-      </ol>
+      <ol><li>Cozinha a aveia. <li>Faz ovos mexidos. <li>Adiciona banana e pasta de amendoim por cima.</li></ol>
     </div>
 
     <div class="card">
-      <h3>🌾 Almoço - Fazendeiro Clássico</h3>
-      <p><strong>Ingredientes:</strong> 200g arroz integral • 150g feijão • 200g frango grelhado • brócolis, cenoura, espinafre • ½ abacate</p>
-      <p><strong>Macros:</strong> ~750 kcal | 55g Prot | 90g Carb | 18g Gord</p>
-      <p><strong>Tempo de Preparo:</strong> 20 minutos</p>
-      <p><strong>Benefícios:</strong> Refeição completa com carboidratos complexos, proteína e gorduras boas</p>
+      <h3>🌾 Almoço</h3>
+      <p><strong>Fazendeiro Clássico:</strong> 200g arroz integral, 150g feijão, 200g frango grelhado, legumes (brócolis, cenoura, espinafre), ½ abacate</p>
+      <p><strong>Macros:</strong> ~750 kcal | 55P | 90C | 18G</p>
       <h4>Modo de Preparo:</h4>
-      <ol>
-        <li>Cozinhe o arroz e o feijão.</li>
-        <li>Grelhe o frango com alho, sal e pimenta.</li>
-        <li>Salteie os legumes e monte o prato com abacate.</li>
-      </ol>
+      <ol><li>Cozinha arroz e feijão. <li>Grelha o frango. <li>Salteia os legumes e monta o prato.</li></ol>
     </div>
 
     <div class="card">
-      <h3>🍗 Jantar - Salmão de Recuperação</h3>
-      <p><strong>Ingredientes:</strong> 200g salmão • Batata doce • Salada verde com azeite</p>
-      <p><strong>Macros:</strong> ~620 kcal | 50g Prot | 45g Carb | 25g Gord</p>
-      <p><strong>Tempo de Preparo:</strong> 15 minutos</p>
-      <p><strong>Benefícios:</strong> Rico em ômega-3 + excelente para recuperação noturna</p>
+      <h3>🍣 Jantar</h3>
+      <p><strong>Salmão de Recuperação:</strong> 200g salmão, batata doce, salada verde com azeite</p>
+      <p><strong>Macros:</strong> ~620 kcal | 50P | 45C | 25G</p>
       <h4>Modo de Preparo:</h4>
-      <ol>
-        <li>Tempere o salmão com limão e ervas.</li>
-        <li>Asse no forno a 180°C por 12-15 minutos.</li>
-        <li>Cozinhe a batata doce e prepare a salada.</li>
-      </ol>
+      <ol><li>Tempere o salmão com limão e ervas. <li>Asse a 180°C por 12-15 min. <li>Cozinha batata doce e prepara salada.</li></ol>
     </div>
 
     <div class="card">
-      <h3>🥜 Snack da Tarde (Sem Whey)</h3>
-      <p><strong>Ingredientes:</strong> 200g Iogurte Grego natural • 1 Maçã ou morangos • 20g Amêndoas • Canela</p>
-      <p><strong>Macros:</strong> ~320 kcal | 20g Prot | 25g Carb | 18g Gord</p>
-      <p><strong>Tempo de Preparo:</strong> 2 minutos</p>
-      <p><strong>Benefícios:</strong> Mantém saciedade + gorduras boas e probióticos</p>
+      <h3>🥜 Snack / Pós-Treino</h3>
+      <p><strong>Recuperação Rápida:</strong> 200g iogurte grego, 1 maçã, 20g amêndoas, canela</p>
+      <p><strong>Macros:</strong> ~320 kcal | 20P | 25C | 18G</p>
       <h4>Modo de Preparo:</h4>
-      <ol>
-        <li>Coloque o iogurte grego numa taça.</li>
-        <li>Corte a maçã ou adicione morangos.</li>
-        <li>Polvilhe amêndoas e canela.</li>
-      </ol>
+      <ol><li>Coloca iogurte na taça. <li>Adiciona maçã cortada e amêndoas.</li></ol>
+    </div>
+
+    <div class="card">
+      <h3>🍳 Outra Opção - Pequeno Almoço Proteico</h3>
+      <p>4 ovos mexidos com espinafre, 100g aveia, 1 banana e whey (opcional)</p>
+      <h4>Modo de Preparo:</h4>
+      <p>Refoga espinafre, mexe os ovos, cozinha aveia e serve com banana.</p>
     </div>
   </section>
 
-  <!-- EXERCÍCIOS -->
+  <!-- EXERCÍCIOS COMPLETOS -->
   <section id="exercicios">
-    <h2>💪 Exercícios com Peso Corporal</h2>
+    <h2>💪 Exercícios para Todos os Músculos</h2>
     <div class="muscle-grid">
-      <div class="exercise card"><h3>Peito - Flexões (Push-ups)</h3><p>4 séries × 10-20 repetições</p></div>
-      <div class="exercise card"><h3>Ombros - Pike Push-ups</h3><p>4 séries × 8-12 repetições</p></div>
-      <div class="exercise card"><h3>Tríceps - Flexões Diamante</h3><p>3 séries × 10-15 repetições</p></div>
-      <div class="exercise card"><h3>Quadríceps - Agachamento Livre</h3><p>4 séries × 15-25 repetições</p></div>
-      <div class="exercise card"><h3>Glúteos - Ponte de Glúteo</h3><p>4 séries × 15-20 repetições</p></div>
-      <div class="exercise card"><h3>Pernas - Avanços (Lunges)</h3><p>3 séries × 12 repetições por perna</p></div>
-      <div class="exercise card"><h3>Abdômen - Prancha + Abdominal Bicicleta</h3><p>3 séries × 30-60s (Prancha) + 20 por lado</p></div>
+      <div class="exercise card"><h3>Peito</h3><p>Flexões • Flexões Diamante • Flexões Elevadas</p></div>
+      <div class="exercise card"><h3>Ombros</h3><p>Pike Push-ups • Elevação Lateral (com garrafas) • Handstand Hold</p></div>
+      <div class="exercise card"><h3>Costas</h3><p>Superman • Remada Invertida • Pull-ups (ou negativos)</p></div>
+      <div class="exercise card"><h3>Bíceps</h3><p>Flexão de Braço com Toalha • Chin-ups</p></div>
+      <div class="exercise card"><h3>Tríceps</h3><p>Flexões Diamante • Mergulhos em Banco</p></div>
+      <div class="exercise card"><h3>Quadríceps / Pernas</h3><p>Agachamento Livre • Avanços • Pistol Squat (assistido)</p></div>
+      <div class="exercise card"><h3>Glúteos</h3><p>Ponte de Glúteo • Hip Thrust • Donkey Kicks</p></div>
+      <div class="exercise card"><h3>Abdómen</h3><p>Prancha • Abdominal Bicicleta • Leg Raises • Dragon Flag</p></div>
     </div>
   </section>
 
@@ -110,66 +98,52 @@
   <section id="calculadora">
     <h2>🧮 Calculadoras</h2>
     
-    <!-- Calculadora Pessoal -->
+    <!-- IA Super Inteligente -->
     <div class="card">
-      <h3>1. Calorias Diárias Pessoais</h3>
+      <h3>🔍 Calculadora IA de Refeições</h3>
+      <textarea id="refeicaoInput" placeholder="Ex: 200g salmão, 150g arroz integral, brócolis, 1 banana"></textarea>
+      <button onclick="analisarRefeicao()">Analisar com IA</button>
+      <div id="resultadoIA" style="margin-top:20px; padding:15px; background:#111; border-radius:8px;"></div>
+    </div>
+
+    <!-- Calorias Diárias Pessoais -->
+    <div class="card">
+      <h3>📊 Calorias Diárias Pessoais</h3>
       <label>Sexo:</label><select id="sexo"><option value="masculino">Masculino</option><option value="feminino">Feminino</option></select>
       <label>Idade (anos):</label><input type="number" id="idade" value="25">
       <label>Peso (kg):</label><input type="number" id="peso" value="75">
       <label>Altura (cm):</label><input type="number" id="altura" value="175">
-      <label>Nível de Atividade:</label>
+      <label>Atividade:</label>
       <select id="atividade">
         <option value="1.2">Sedentário</option>
-        <option value="1.375" selected>Leve (1-3x)</option>
-        <option value="1.55">Moderado (3-5x)</option>
-        <option value="1.725">Intenso (6-7x)</option>
+        <option value="1.375" selected>Leve</option>
+        <option value="1.55">Moderado</option>
+        <option value="1.725">Intenso</option>
       </select>
-      <button onclick="calcularCaloriasPessoais()">Calcular Calorias Diárias</button>
-      <div id="resultadoPessoal" style="margin-top:20px; padding:15px; background:#1a1a1a; border-radius:8px;"></div>
-    </div>
-
-    <!-- Calculadora de Refeições (sem cruz) -->
-    <div class="card">
-      <h3>2. Calculadora de Calorias da Refeição</h3>
-      <select id="alimento">
-        <option value="0">Escolhe um alimento...</option>
-        <option value="89">Banana (1 unid.) - 89 kcal</option>
-        <option value="52">Maçã (1 unid.) - 52 kcal</option>
-        <option value="85">Laranja (1 unid.) - 85 kcal</option>
-        <option value="50">Morangos (100g) - 50 kcal</option>
-        <option value="31">Brócolis (100g) - 31 kcal</option>
-        <option value="23">Espinafre (100g) - 23 kcal</option>
-        <option value="41">Cenoura (100g) - 41 kcal</option>
-        <option value="165">Frango Grelhado (100g) - 165 kcal</option>
-        <option value="130">Arroz Cozido (100g) - 130 kcal</option>
-      </select>
-      <input type="number" id="quantidade" placeholder="Quantidade (g ou unid.)" value="100">
-      <button onclick="adicionarAlimento()">➕ Adicionar Alimento</button>
-
-      <div id="listaRefeicao" style="margin:20px 0; min-height:120px;"></div>
-      <h3>Total: <span id="totalCalorias" style="color:#ffd700; font-size:1.5rem;">0 kcal</span></h3>
-      <button onclick="limparRefeicao()">Limpar Refeição</button>
+      <button onclick="calcularCaloriasPessoais()">Calcular TDEE</button>
+      <div id="resultadoPessoal" style="margin-top:20px; padding:15px; background:#1a1a1a;"></div>
     </div>
   </section>
 
-  <!-- PLANO E CLARK KENT -->
+  <!-- PLANO 12 SEMANAS -->
   <section id="plano">
     <h2>📅 Plano de Treino de 12 Semanas</h2>
     <div class="card">
-      <table>
+      <table style="width:100%; border-collapse:collapse;">
         <tr><th>Semana</th><th>Foco</th><th>Treino</th><th>Dica</th></tr>
-        <tr><td>1-4</td><td>Hipertrofia</td><td>3-4 dias de peso corporal</td><td>Foco em técnica</td></tr>
-        <tr><td>5-8</td><td>Força</td><td>Aumente repetições</td><td>Adicione pausas curtas</td></tr>
-        <tr><td>9-12</td><td>Definição</td><td>HIIT + Circuito</td><td>Diminua descanso</td></tr>
+        <tr><td>1-4</td><td>Hipertrofia</td><td>3-4 dias peso corporal</td><td>Foco em técnica</td></tr>
+        <tr><td>5-8</td><td>Força</td><td>Aumentar repetições</td><td>Pausas curtas</td></tr>
+        <tr><td>9-12</td><td>Definição</td><td>HIIT + Circuito</td><td>Diminuir descanso</td></tr>
       </table>
     </div>
   </section>
 
+  <!-- CLARK KENT MODE -->
   <section id="clark">
     <h2>🦸 Clark Kent Mode - Ativado</h2>
-    <div class="card" style="text-align:center;">
-      <p style="font-size:1.5rem;">Disciplina é o seu verdadeiro superpoder.</p>
-      <p style="color:#ff3333; font-size:1.6rem;">"Smallville não te define. Suas escolhas definem você."</p>
+    <div class="card" style="text-align:center; font-size:1.4rem;">
+      <p>Disciplina é o teu verdadeiro superpoder.</p>
+      <p style="color:#ff3333;">"Smallville não te define. Suas escolhas definem você."</p>
     </div>
   </section>
 
@@ -191,48 +165,57 @@
         : 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * idade);
 
       const tdee = Math.round(tmb * atividade);
-
       document.getElementById('resultadoPessoal').innerHTML = `
-        <strong>Resultados:</strong><br>
-        TMB: ${Math.round(tmb)} kcal<br>
-        Calorias Diárias: <strong>${tdee} kcal</strong>
+        <strong>TMB:</strong> ${Math.round(tmb)} kcal<br>
+        <strong>Calorias Diárias Recomendadas:</strong> <span style="color:#ffd700;font-size:1.5rem;">${tdee} kcal</span>
       `;
     }
 
-    // Calculadora de Refeições (sem cruz)
-    let refeicaoAtual = [];
+    // IA de Refeições
+    const alimentosDB = {
+      "banana": 89, "maçã": 52, "pera": 62, "laranja": 85, "morango": 50,
+      "manga": 68, "abacaxi": 47, "abacate": 160,
+      "frango": 165, "peito de frango": 165, "salmão": 200,
+      "atum": 130, "bovina": 180, "porco": 200,
+      "arroz": 130, "aveia": 95, "ovo": 78, "ovos": 78,
+      "brócolis": 31, "espinafre": 23, "batata doce": 77,
+      "pasta de amendoim": 580
+    };
 
-    function adicionarAlimento() {
-      const select = document.getElementById('alimento');
-      const nome = select.options[select.selectedIndex].text;
-      const calPor100 = parseInt(select.value);
-      const qtd = parseFloat(document.getElementById('quantidade').value) || 100;
+    function analisarRefeicao() {
+      const texto = document.getElementById('refeicaoInput').value.toLowerCase().trim();
+      if (!texto) return alert("Escreve tua refeição!");
 
-      if (calPor100 === 0) {
-        alert("Por favor, escolhe um alimento!");
-        return;
-      }
-
-      const calorias = Math.round((calPor100 / 100) * qtd);
-      refeicaoAtual.push({nome, calorias});
-      atualizarLista();
-    }
-
-    function atualizarLista() {
-      let html = "<ul>";
       let total = 0;
-      refeicaoAtual.forEach((item) => {
-        html += `<li>${item.nome} — ${item.calorias} kcal</li>`;
-        total += item.calorias;
-      });
-      html += "</ul>";
-      document.getElementById('listaRefeicao').innerHTML = html;
-      document.getElementById('totalCalorias').textContent = total + " kcal";
-    }
+      let lista = [];
 
-    function limparRefeicao() {
-      refeicaoAtual = [];
-      atualizarLista();
+      const partes = texto.split(/,| e |\+|;/).map(p => p.trim());
+
+      partes.forEach(parte => {
+        let qtd = 100;
+        let nome = parte;
+
+        const num = parte.match(/(\d+(?:\.\d+)?)/);
+        if (num) qtd = parseFloat(num[0]);
+
+        let cal = 0;
+        for (let key in alimentosDB) {
+          if (nome.includes(key)) {
+            cal = alimentosDB[key];
+            break;
+          }
+        }
+
+        const calItem = Math.round((cal / 100) * qtd);
+        total += calItem;
+        lista.push(`• ${parte} → ${calItem} kcal`);
+      });
+
+      document.getElementById('resultadoIA').innerHTML = `
+        <strong>Análise IA:</strong><br><br>
+        ${lista.join('<br>')}<br><br>
+        <strong style="color:#ffd700; font-size:1.7rem;">Total: ${total} kcal</strong>
+      `;
     }
   </script>
 </body>
