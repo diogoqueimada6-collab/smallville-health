@@ -5,80 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Smallville Health Fortress</title>
   <style>
-    :root {
-      --accent: #ff3333;
-      --text: #ff6666;
-    }
+    :root { --accent: #ff3333; --text: #ff6666; }
     html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #000000;
-      color: var(--text);
-      margin: 0; padding: 0;
-    }
-    header {
-      background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176') center/cover;
-      height: 450px;
-      display: flex; align-items: center; justify-content: center;
-      border-bottom: 8px solid var(--accent);
-    }
-    h1 {
-      font-size: 4.5rem;
-      color: var(--accent);
-      text-shadow: 0 0 35px #ff0000;
-      letter-spacing: 8px;
-    }
-    nav {
-      background: #1a1a1a;
-      padding: 20px;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      border-bottom: 3px solid var(--accent);
-    }
-    nav a {
-      color: var(--text);
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1.2rem;
-      transition: all 0.3s;
-    }
-    nav a:hover { 
-      color: var(--accent);
-      transform: scale(1.08);
-    }
-
-    section { padding: 110px 20px 80px 20px; max-width: 1200px; margin: 0 auto; }
-    
-    h2 {
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 40px;
-      text-shadow: 0 0 20px #ff0000;
-    }
-
-    .card {
-      background: rgba(20, 20, 20, 0.98);
-      border: 2px solid var(--accent);
-      border-radius: 15px;
-      padding: 25px;
-      margin: 25px 0;
-      box-shadow: 0 0 30px rgba(255, 51, 51, 0.5);
-    }
-    .muscle-grid {
-      display: grid; 
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); 
-      gap: 25px;
-    }
-    .exercise {
-      background: #1a1a1a;
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      border: 1px solid var(--accent);
-    }
+    body { font-family: 'Segoe UI', sans-serif; background: #000000; color: var(--text); margin: 0; padding: 0; }
+    header { background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1518709268805-4e9042af2176') center/cover; height: 450px; display: flex; align-items: center; justify-content: center; border-bottom: 8px solid var(--accent); }
+    h1 { font-size: 4.5rem; color: var(--accent); text-shadow: 0 0 35px #ff0000; letter-spacing: 8px; }
+    nav { background: #1a1a1a; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100; border-bottom: 3px solid var(--accent); }
+    nav a { color: var(--text); margin: 0 18px; text-decoration: none; font-weight: bold; font-size: 1.2rem; transition: all 0.3s; }
+    nav a:hover { color: var(--accent); transform: scale(1.08); }
+    section { padding: 120px 20px 80px 20px; max-width: 1200px; margin: 0 auto; }
+    h2 { color: var(--accent); text-align: center; margin-bottom: 40px; text-shadow: 0 0 20px #ff0000; }
+    .card { background: rgba(20, 20, 20, 0.98); border: 2px solid var(--accent); border-radius: 15px; padding: 25px; margin: 25px 0; box-shadow: 0 0 30px rgba(255, 51, 51, 0.5); }
+    .muscle-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 25px; }
+    .exercise { background: #1a1a1a; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid var(--accent); }
   </style>
 </head>
 <body>
@@ -96,7 +35,6 @@
   <!-- ALIMENTAÇÃO -->
   <section id="nutricao">
     <h2>🥗 Enciclopédia de Alimentação</h2>
-    
     <div class="card">
       <h3>🔋 Pequeno Almoço - Super-Homem</h3>
       <p><strong>Ingredientes:</strong> 6 claras + 2 ovos inteiros • 80g Aveia • 2 Bananas • 2 colheres de pasta de amendoim • Canela</p>
@@ -164,11 +102,11 @@
       <div class="exercise card"><h3>Quadríceps - Agachamento Livre</h3><p>4 séries × 15-25 repetições</p></div>
       <div class="exercise card"><h3>Glúteos - Ponte de Glúteo</h3><p>4 séries × 15-20 repetições</p></div>
       <div class="exercise card"><h3>Pernas - Avanços (Lunges)</h3><p>3 séries × 12 repetições por perna</p></div>
-      <div class="exercise card"><h3>Abdômen - Prancha + Bicicleta</h3><p>3 séries × 30-60s (Prancha) + 20 por lado</p></div>
+      <div class="exercise card"><h3>Abdômen - Prancha + Abdominal Bicicleta</h3><p>3 séries × 30-60s (Prancha) + 20 por lado</p></div>
     </div>
   </section>
 
-  <!-- CALCULADORA - DUAS CALCULADORAS -->
+  <!-- CALCULADORA -->
   <section id="calculadora">
     <h2>🧮 Calculadoras</h2>
     
@@ -190,27 +128,27 @@
       <div id="resultadoPessoal" style="margin-top:20px; padding:15px; background:#1a1a1a; border-radius:8px;"></div>
     </div>
 
-    <!-- Calculadora de Refeições -->
+    <!-- Calculadora de Refeições (sem cruz) -->
     <div class="card">
       <h3>2. Calculadora de Calorias da Refeição</h3>
       <select id="alimento">
         <option value="0">Escolhe um alimento...</option>
-        <option value="165">Frango Grelhado (100g) - 165 kcal</option>
-        <option value="130">Arroz Cozido (100g) - 130 kcal</option>
         <option value="89">Banana (1 unid.) - 89 kcal</option>
         <option value="52">Maçã (1 unid.) - 52 kcal</option>
-        <option value="58">Ovo (1 unid.) - 58 kcal</option>
-        <option value="95">Aveia (30g) - 95 kcal</option>
-        <option value="200">Salmão (100g) - 200 kcal</option>
-        <option value="160">Iogurte Grego (200g) - 160 kcal</option>
-        <option value="580">Pasta de Amendoim (2 colheres) - 580 kcal</option>
+        <option value="85">Laranja (1 unid.) - 85 kcal</option>
+        <option value="50">Morangos (100g) - 50 kcal</option>
+        <option value="31">Brócolis (100g) - 31 kcal</option>
+        <option value="23">Espinafre (100g) - 23 kcal</option>
+        <option value="41">Cenoura (100g) - 41 kcal</option>
+        <option value="165">Frango Grelhado (100g) - 165 kcal</option>
+        <option value="130">Arroz Cozido (100g) - 130 kcal</option>
       </select>
       <input type="number" id="quantidade" placeholder="Quantidade (g ou unid.)" value="100">
-      <button onclick="adicionarAlimento()">Adicionar Alimento</button>
+      <button onclick="adicionarAlimento()">➕ Adicionar Alimento</button>
 
-      <div id="listaRefeicao" style="margin:20px 0;"></div>
-      <h3>Total da Refeição: <span id="totalCalorias" style="color:#ffd700; font-size:1.4rem;">0 kcal</span></h3>
-      <button onclick="limparRefeicao()">Limpar Tudo</button>
+      <div id="listaRefeicao" style="margin:20px 0; min-height:120px;"></div>
+      <h3>Total: <span id="totalCalorias" style="color:#ffd700; font-size:1.5rem;">0 kcal</span></h3>
+      <button onclick="limparRefeicao()">Limpar Refeição</button>
     </div>
   </section>
 
@@ -257,47 +195,39 @@
       document.getElementById('resultadoPessoal').innerHTML = `
         <strong>Resultados:</strong><br>
         TMB: ${Math.round(tmb)} kcal<br>
-        Calorias Diárias: <strong>${tdee} kcal</strong><br><br>
-        Ganho muscular: ${Math.round(tdee * 1.2)} kcal<br>
-        Perda de gordura: ${Math.round(tdee * 0.85)} kcal
+        Calorias Diárias: <strong>${tdee} kcal</strong>
       `;
     }
 
-    // Calculadora de Refeições
+    // Calculadora de Refeições (sem cruz)
     let refeicaoAtual = [];
 
     function adicionarAlimento() {
       const select = document.getElementById('alimento');
       const nome = select.options[select.selectedIndex].text;
-      const calPor100g = parseInt(select.value);
-      const quantidade = parseFloat(document.getElementById('quantidade').value) || 100;
+      const calPor100 = parseInt(select.value);
+      const qtd = parseFloat(document.getElementById('quantidade').value) || 100;
 
-      if (calPor100g === 0) {
-        alert("Por favor, escolhe um alimento.");
+      if (calPor100 === 0) {
+        alert("Por favor, escolhe um alimento!");
         return;
       }
 
-      const calorias = Math.round((calPor100g / 100) * quantidade);
+      const calorias = Math.round((calPor100 / 100) * qtd);
       refeicaoAtual.push({nome, calorias});
-
       atualizarLista();
     }
 
     function atualizarLista() {
       let html = "<ul>";
       let total = 0;
-      refeicaoAtual.forEach((item, i) => {
-        html += `<li>${item.nome} — ${item.calorias} kcal <button onclick="remover(${i})" style="color:red;">×</button></li>`;
+      refeicaoAtual.forEach((item) => {
+        html += `<li>${item.nome} — ${item.calorias} kcal</li>`;
         total += item.calorias;
       });
       html += "</ul>";
       document.getElementById('listaRefeicao').innerHTML = html;
       document.getElementById('totalCalorias').textContent = total + " kcal";
-    }
-
-    function remover(i) {
-      refeicaoAtual.splice(i, 1);
-      atualizarLista();
     }
 
     function limparRefeicao() {
